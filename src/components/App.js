@@ -1,24 +1,24 @@
-import React from "react"
-import Signup from "./authentication/Signup"
-import { AuthProvider } from "../contexts/AuthContext"
-import { HashRouter as Router, Switch, Route } from "react-router-dom"
-import Profile from "./authentication/Profile"
-import Login from "./authentication/Login"
-import PrivateRoute from "./authentication/PrivateRoute"
-import ForgotPassword from "./authentication/ForgotPassword"
-import UpdateProfile from "./authentication/UpdateProfile"
-import Dashboard from "./drive/DashBoard"
-import Landing from "./Landing"
+import React from 'react';
+import Signup from './authentication/Signup';
+import { AuthProvider } from '../contexts/AuthContext';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import Profile from './authentication/Profile ';
+import Login from './authentication/Login';
+import PrivateRoute from './authentication/PrivateRoute';
+import ForgotPassword from './authentication/ForgotPassword';
+import UpdateProfile from './authentication/UpdateProfile';
+import Dashboard from './drive/DashBoard';
+import Landing from './Landing';
 
 function App() {
   return (
     <Router>
       <AuthProvider>
         <Switch>
-          <Route  exact path="/" component={Landing}/>
+          <Route exact path="/" component={Landing} />
           {/* Drive */}
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
-          <PrivateRoute exact path="/folder/:folderId" component={Dashboard}/>
+          <PrivateRoute exact path="/folder/:folderId" component={Dashboard} />
 
           {/* Profile */}
           <PrivateRoute path="/user" component={Profile} />
@@ -31,7 +31,7 @@ function App() {
         </Switch>
       </AuthProvider>
     </Router>
-  )
+  );
 }
 
-export default  App
+export default App;
