@@ -2,7 +2,7 @@ import React from 'react';
 import Signup from './authentication/Signup';
 import { AuthProvider } from '../contexts/AuthContext';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import Profile from './authentication/Profile ';
+import Profile from './authentication/Profile';
 import Login from './authentication/Login';
 import PrivateRoute from './authentication/PrivateRoute';
 import ForgotPassword from './authentication/ForgotPassword';
